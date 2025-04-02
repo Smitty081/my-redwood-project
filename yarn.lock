@@ -19604,7 +19604,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"root-workspace-0b6124@workspace:.":
+"root-workspace-0b6124@workspace:., root-workspace-0b6124@workspace:^":
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
@@ -19613,6 +19613,7 @@ __metadata:
     "@redwoodjs/core": "npm:8.5.0"
     "@redwoodjs/project-config": "npm:8.5.0"
     prettier-plugin-tailwindcss: "npm:^0.5.12"
+    root-workspace-0b6124: "workspace:^"
   languageName: unknown
   linkType: soft
 
