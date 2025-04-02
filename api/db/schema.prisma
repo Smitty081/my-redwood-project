@@ -6,7 +6,7 @@
 
 datasource db {
   provider = "postgresql"
-  url      = env("postgresql://postgres:YAQZRRhXwPNXFenDTTGsmffSIsFQFkmk@centerbeam.proxy.rlwy.net:10830/railway")
+  url      = env("DATABASE_URL")
 }
 
 generator client {
