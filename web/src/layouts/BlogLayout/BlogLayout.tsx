@@ -11,34 +11,30 @@ const BlogLayout = ({ children }: BlogLayoutProps) => {
   return (
     <>
       <header>
-        <div className="flex-between">
-          <h1>
-            <Link to={routes.home()}>Redwood Blog</Link>
+        <div className="flex justify-between items-center bg-green-700">
+          <h1 className="text-5xl p-10">
+            <Link to={routes.home()}>Dream Journal</Link>
           </h1>
-          {isAuthenticated ? (
-            <div>
-              <span>Logged in as {currentUser.email}</span>{' '}
-              <button type="button" onClick={logOut}>
-                Logout
-              </button>
-            </div>
-          ) : (
-            <Link to={routes.login()}>Login</Link>
-          )}
+          <nav className="pr-48 text-white text-lg">
+            <ul>
+              <li>
+                <Link to={routes.about()}>About</Link>
+              </li>
+              <li>
+                <Link to={routes.contact()}>Contact</Link>
+              </li>
+              {isAuthenticated ? (
+                <div className="flex justify-between">
+                  <button type="button" onClick={logOut}>
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                <Link to={routes.login()}>Login</Link>
+              )}
+            </ul>
+          </nav>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <Link to={routes.home()}>Home</Link>
-            </li>
-            <li>
-              <Link to={routes.about()}>About</Link>
-            </li>
-            <li>
-              <Link to={routes.contact()}>Contact</Link>
-            </li>
-          </ul>
-        </nav>
       </header>
       <main>{children}</main>
     </>
